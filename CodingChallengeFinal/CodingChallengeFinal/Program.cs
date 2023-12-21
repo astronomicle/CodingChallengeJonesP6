@@ -7,40 +7,22 @@ class CodingChallengeJones
 {
     static void Main()
     {
-        /*Console.WriteLine("Hello, My Name is Travis Jones and I have a variety of functions for you to choose from");
+        Console.WriteLine("Hello, My Name is Travis Jones and I have a variety of functions for you to choose from");
         Console.WriteLine("Please write the name of the function you wish to do from this selcetion:\n1 - Sum\n2 - convert\n3 - AddOne\n4 - Power\n5 - Age\n6 - Triangle\n7 - LessThanOrEqualToZero\n8 - LessThan100\n9 - EqualTo\n10 - GiveMeSomething\n11 - Reverse\n12 - howManySeconds\n13 - sumPolygon\n14 - nameString\n15 - And\n16 - points\n17 - findPerimeter\n18 - helloName\n19 - animals\n20 - footballPoints\n21 - monthName\n22 - findMinMax\n23 - getAbsSum\n24 - calculateExponent\n25 - MultiplyByLength\n26 - HammingDistance");
-        Console.ReadLine();*/
-        Console.WriteLine(CallFunction(1));
+        int f = Convert.ToInt32(Console.ReadLine());
+        Console.WriteLine(CallFunction(f));
+        Repeat();
+    }
 
-        /*Console.WriteLine("The sum of 4 and 12 is " + Sum(4, 12));
-        Console.WriteLine("5 minutes is also " + convert(5) + " seconds");
-        Console.WriteLine("7 plus one is " + AddOne(7));
-        Console.WriteLine("When the voltage is 320 and the current is 50, then the power is " + Power(320, 50));
-        Console.WriteLine("15 years old is the same as " + Age(15) + " days old");
-        Console.WriteLine("When the base of the base is 4 and the height is 6, then the area is " + Triangle(4, 6));
-        Console.WriteLine("7 is less than or equal to 0, this statement is " + LessThanOrEqualToZero(7));
-        Console.WriteLine("77 plus 33 is less than 100, this statement is " + LessThan100(77, 33));
-        Console.WriteLine("5478239 is equal to 5478239, this statement is " + EqualTo(5478239, 5478239));
-        Console.WriteLine(GiveMeSomething("is wrong..."));
-        Console.WriteLine("False is " + Reverse(false));
-        Console.WriteLine("24 hours is also " + howManySeconds(24) + " seconds");
-        Console.WriteLine("A polygon with 12 sides has " + sumPolygon(12) + " degree internal angle");
-        Console.WriteLine("The name is " + nameString("John"));
-        Console.WriteLine(And(true, false));
-        Console.WriteLine("There were " + points(3, 13) + " points scored during the game");
-        Console.WriteLine("With a width of 12 and a length of 23 then the perimeter is " + findPerimeter(12, 23));
-        Console.WriteLine(helloName("Johnny"));
-        Console.WriteLine("If there are 5 chickens, 12 cows, and 9 pigs, then there are " + animals(5, 12, 9) + " total legs");
-        Console.WriteLine("The football team had 11 wins, 2 draws, and 3 losses, so the team has " + footballPoints(11, 2, 3) + " points");
-        Console.WriteLine("This month is " + monthName(11));
-        int[] minMax = { 12, -77, 555, 89 };
-        Console.WriteLine("The max for the array 12, -77, 555, 89 is " + findMinMax(minMax));
-        int[] numbers = { 2, 34, -22, 7, -1 };
-        Console.WriteLine("The sum of the absolute values of 2, 34, -22, 7, -1 is " + getAbsSum(numbers));
-        Console.WriteLine("The base number 6 multiplied by the exponent 4 has a product of " + calculateExponent(6, 4));
-        int[] lengths = { 0, 11, -9, 12, 5 };
-        Console.WriteLine("The array 0, 11, -9, 12, 5 multiplied by the length gives the new array " + MultiplyByLength(lengths));
-        Console.WriteLine("The hamming distance for the line abcdefgg and abcbefgh is " + HammingDistance("abcdefgg", "abcbefgh"));*/
+    static void Repeat()
+    {
+        for (int i = 1; i < 100; i++)
+        {
+            Console.WriteLine("Hello, My Name is Travis Jones and I have a variety of functions for you to choose from");
+            Console.WriteLine("Please write the name of the function you wish to do from this selcetion:\n1 - Sum\n2 - convert\n3 - AddOne\n4 - Power\n5 - Age\n6 - Triangle\n7 - LessThanOrEqualToZero\n8 - LessThan100\n9 - EqualTo\n10 - GiveMeSomething\n11 - Reverse\n12 - howManySeconds\n13 - sumPolygon\n14 - nameString\n15 - And\n16 - points\n17 - findPerimeter\n18 - helloName\n19 - animals\n20 - footballPoints\n21 - monthName\n22 - findMinMax\n23 - getAbsSum\n24 - calculateExponent\n25 - MultiplyByLength\n26 - HammingDistance");
+            int f = Convert.ToInt32(Console.ReadLine());
+            Console.WriteLine(CallFunction(f));
+        }
     }
 
     public static string CallFunction(int f)
@@ -54,6 +36,7 @@ class CodingChallengeJones
             Console.WriteLine("Please enter another number");
             int y = Convert.ToInt32(Console.ReadLine());
             Console.WriteLine("The sum is " + Sum(x, y));
+
         }
         if (f == 2)
         {
@@ -67,7 +50,7 @@ class CodingChallengeJones
             Console.WriteLine("You chose AddOne");
             Console.WriteLine("Please enter a number");
             int x = Convert.ToInt32(Console.ReadLine());
-            Console.WriteLine("The sum is " + AddOne(x));
+            Console.WriteLine("The power is " + AddOne(x));
         }
         if (f == 4)
         {
@@ -78,8 +61,180 @@ class CodingChallengeJones
             int c = Convert.ToInt32(Console.ReadLine());
             Console.WriteLine("The sum is " + Power(v, c));
         }
+        if(f == 5)
+        {
+            Console.WriteLine("You chose Age");
+            Console.WriteLine("Please enter an age in years");
+            int y = Convert.ToInt32(Console.ReadLine());
+            Console.WriteLine("The age in days is " + Age(y));
+        }
+        if (f == 6)
+        {
+            Console.WriteLine("You chose Triangle");
+            Console.WriteLine("Please enter a base");
+            int b = Convert.ToInt32(Console.ReadLine());
+            Console.WriteLine("Please enter a height");
+            int h = Convert.ToInt32(Console.ReadLine());
+            Console.WriteLine("The triangle's area is " + Triangle(b, h));
+        }
+        if (f == 7)
+        {
+            Console.WriteLine("You chose LessThanOrEqualToZero");
+            Console.WriteLine("Please enter a number");
+            int n = Convert.ToInt32(Console.ReadLine());
+            Console.WriteLine("The number is " + LessThanOrEqualToZero(n));
+        }
+        if (f == 8)
+        {
+            Console.WriteLine("You chose lessThan100");
+            Console.WriteLine("Please enter a number");
+            int a = Convert.ToInt32(Console.ReadLine());
+            Console.WriteLine("Please enter another number");
+            int b = Convert.ToInt32(Console.ReadLine());
+            Console.WriteLine("The sum is " + LessThan100(a, b));
+        }
+        if (f == 9)
+        {
+            Console.WriteLine("You chose EqualTo");
+            Console.WriteLine("Please enter a number");
+            int a = Convert.ToInt32(Console.ReadLine());
+            Console.WriteLine("Please enter another number");
+            int b = Convert.ToInt32(Console.ReadLine());
+            Console.WriteLine("The numbers is " + EqualTo(a, b));
+        }
+        if (f == 10)
+        {
+            Console.WriteLine("You chose GiveMeSomething");
+            Console.WriteLine("Please enter a word");
+            string s = Convert.ToString(Console.ReadLine());
+            Console.WriteLine(GiveMeSomething(s));
+        }
+        if (f == 11)
+        {
+            Console.WriteLine("You chose Reverse");
+            Console.WriteLine("Please enter true or false");
+            bool b = Convert.ToBoolean(Console.ReadLine());
+            Console.WriteLine("The reverse is " + Reverse(b));
+        }
+        if (f == 12)
+        {
+            Console.WriteLine("You chose howManySeconds");
+            Console.WriteLine("Please enter a time in minutes");
+            int s = Convert.ToInt32(Console.ReadLine());
+            Console.WriteLine("The seconds is " + howManySeconds(s));
+        }
+        if (f == 13)
+        {
+            Console.WriteLine("You chose sumPolygon");
+            Console.WriteLine("Please enter a number of sides");
+            int p = Convert.ToInt32(Console.ReadLine());
+            Console.WriteLine("The sum of internal angles is " + howManySeconds(p));
+        }
+        if (f == 14)
+        {
+            Console.WriteLine("You chose nameString");
+            Console.WriteLine("Please enter a name");
+            string first = Convert.ToString(Console.ReadLine());
+            Console.WriteLine(nameString(first));
+        }
+        if (f == 15)
+        {
+            Console.WriteLine("You chose And");
+            Console.WriteLine("Please enter true or false");
+            bool a = Convert.ToBoolean(Console.ReadLine());
+            Console.WriteLine("Please enter true or false");
+            bool b = Convert.ToBoolean(Console.ReadLine());
+            Console.WriteLine("The bools is " + And(a, b));
+        }
+        if (f == 16)
+        {
+            Console.WriteLine("You chose points");
+            Console.WriteLine("Please enter an amount of two pointers");
+            int o = Convert.ToInt32(Console.ReadLine());
+            Console.WriteLine("Please enter an amount of three pointers");
+            int t = Convert.ToInt32(Console.ReadLine());
+            Console.WriteLine("The points scored is " + points(o, t));
+        }
+        if (f == 17)
+        {
+            Console.WriteLine("You chose findPerimeter");
+            Console.WriteLine("Please enter a width");
+            int w = Convert.ToInt32(Console.ReadLine());
+            Console.WriteLine("Please enter a length");
+            int l = Convert.ToInt32(Console.ReadLine());
+            Console.WriteLine("The perimeter is " + findPerimeter(w, l));
+        }
+        if (f == 18)
+        {
+            Console.WriteLine("You chose helloName");
+            Console.WriteLine("Please enter a name");
+            string name = Convert.ToString(Console.ReadLine());
+            Console.WriteLine(helloName(name));
+        }
+        if (f == 19)
+        {
+            Console.WriteLine("You chose animals");
+            Console.WriteLine("Please enter an amount of chickens");
+            int ch = Convert.ToInt32(Console.ReadLine());
+            Console.WriteLine("Please enter an amount of cows");
+            int cow = Convert.ToInt32(Console.ReadLine());
+            Console.WriteLine("Please enter an amount of pigs");
+            int p = Convert.ToInt32(Console.ReadLine());
+            Console.WriteLine("The numbers of totals legs are is " + animals(ch, cow, p));
+        }
+        if (f == 20)
+        {
+            Console.WriteLine("You chose footballPoints");
+            Console.WriteLine("Please enter an amount of wins");
+            int w = Convert.ToInt32(Console.ReadLine());
+            Console.WriteLine("Please enter an amount of draws");
+            int d = Convert.ToInt32(Console.ReadLine());
+            Console.WriteLine("Please enter an amount of losses");
+            int l = Convert.ToInt32(Console.ReadLine());
+            Console.WriteLine("The points based on wins, draws, and losses is " + footballPoints(w, d, l));
+        }
+        if (f == 21)
+        {
+            Console.WriteLine("You chose monthName");
+            Console.WriteLine("Please enter a number of a month");
+            int m = Convert.ToInt32(Console.ReadLine());
+            Console.WriteLine("The month is " + monthName(m));
+
+        }
+        if (f == 22)
+        {
+            Console.WriteLine("You chose findMinMax");
+
+        }
+        if (f == 23)
+        {
+            Console.WriteLine("You chose getAbsSum");
+        }
+        if (f == 24)
+        {
+            Console.WriteLine("You chose calculateExponent");
+            Console.WriteLine("Please enter a base number");
+            int b = Convert.ToInt32(Console.ReadLine());
+            Console.WriteLine("Please enter an exponent");
+            int e = Convert.ToInt32(Console.ReadLine());
+            Console.WriteLine("The product is " + calculateExponent(b, e));
+        }
+        if (f == 25)
+        {
+            Console.WriteLine("You chose MultiplyByLength");
+        }
+        if (f == 26)
+        {
+            Console.WriteLine("You chose HammingDistance");
+            Console.WriteLine("Please enter a word");
+            string first = Convert.ToString(Console.ReadLine());
+            Console.WriteLine("Please enter another word");
+            string second = Convert.ToString(Console.ReadLine());
+            Console.WriteLine("The hamming distance is " + HammingDistance(first, second));
+        }
         return null;
     }
+
 
     public static int HammingDistance(string first, string second)
     {
